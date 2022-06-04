@@ -1,0 +1,141 @@
+.product {
+  @include flex(flex-start, flex-start);
+  width: 100%;
+  margin-bottom: 30px;
+  @include tablet {
+    @include flex(center, center);
+    flex-direction: column;
+  }
+
+  &__images {
+    @include flex(space-evenly, flex-start);
+    flex-wrap: wrap;
+    width: 60%;
+  }
+
+  &__images__list {
+    width: 20%;
+    &__item {
+      cursor: pointer;
+    }
+  }
+
+  &__images__main {
+    @include flex(center, center);
+    flex-basis: 70%;
+    
+    img {
+      object-fit: cover;
+    }
+  }
+
+  &__description {
+    position: relative;
+    margin-top: 1.4rem;
+
+    &__title {
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin-bottom: 15px;
+      padding-left: 20px;
+    }
+    
+    &__content {
+      padding: 20px;
+      font-size: 1.2rem;
+      height: 190px;
+      overflow: hidden;
+
+      &.expand {
+        height: max-content;
+      }
+    }
+
+    &__toggle {
+      position: absolute;
+      bottom: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__info {
+    flex-grow: 1;
+    position: sticky;
+    top: $header-shrink-height;
+    @include tablet {
+      margin-top: 50px;
+    }
+  }
+
+  &__info__title {
+    margin: 20px 0;
+    font-size: 2rem;
+  }
+
+  &__info__price {
+    font-size: 1.5rem;
+    color: $main-color;
+    margin-bottom: 20px;
+  }
+
+  &__info__item {
+    margin-bottom: 20px;
+
+    &__title {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    &__colors,
+    &__sizes {
+      gap: 10px;
+      @include flex(flex-start, flex-start);
+
+      &__item {
+        width: 50px;
+        height: 50px;
+        border: 2px solid $text-second-color;
+        border-radius: 50%;
+        cursor: pointer;
+        text-transform: uppercase;
+        @include flex(center, center);
+
+        &:hover,
+        &.active {
+          border-color: $main-color;
+        }
+      }
+    }
+  }
+
+  &__info__quantity {
+    margin-bottom: 20px;
+    @include flex(flex-start, flex-start);
+
+    &__icon {
+      padding: 5px;
+      border: 1px solid $text-second-color;
+      cursor: pointer;
+      @include flex(center, center);
+    }
+
+    &__value {
+      width: 90px;
+      height: 25px;
+      border: {
+        top: 1px solid $text-second-color;
+        bottom: 1px solid $text-second-color;
+      }
+      @include flex(center, center);
+    }
+  }
+  .cart-buttons {
+    @include flex(flex-start, flex-start);
+
+    button {
+      margin-right: 10px;
+      font-size: 1rem;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+$main-background: #fff;
+$main-color: #4267b2;
+$text-main-color: #000;
+$text-second-color: #8d8d8d;
+$text-white: #fff;
+$button-main-background: $main-color;
+$button-main-color: #fff;
+$header-height: 170px;
+$header-tablet-height: 70px;
+$header-mobile-height: 40px;
+$header-shrink-height: 70px;
+$box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.2);
+$colors: (
+  "blue": #4267b2,
+  "orange": #fbb96b,
+  "pink": #fe7e73,
+  "white": #fff,
+  "black": #000,
+  "red": red,
+  "main": $main-color,
+);
+$mobile-width: 600px;
+$tablet-width: 992px;

@@ -1,0 +1,9 @@
+@keyframes border-rounded {
+  0%,
+  100% {
+    border-radius: 58% 42% 38% 62% / 42% 55% 45% 58%;
+  }
+  50% {
+    border-radius: 31% 69% 59% 41% / 28% 24% 76% 72%;
+  }
+}

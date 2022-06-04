@@ -1,0 +1,70 @@
+.catalog {
+  @include flex(flex-start, flex-start);
+  @include tablet {
+    flex-direction: column;
+  }
+  &__filter {
+    width: 20%;
+    @include tablet {
+      height: 100vh;
+      padding: 20px;
+      position: fixed;
+      left: 0;
+      top: $header-tablet-height;
+      z-index: 100;
+      transform: translateX(-100%);
+      background-color: $main-background;
+      box-shadow: $box-shadow;
+      transition: transform 0.5s;
+    }
+    @include mobile {
+      top: $header-mobile-height;
+    }
+    &.active {
+      transform: translateX(0);
+    }
+    @include tablet {
+      width: unset;
+    }
+    &__widget {
+      margin-bottom: 2rem;
+      &__title {
+        font-size: 1.25rem;
+        text-transform: capitalize;
+        margin-bottom: 10px;
+      }
+      &__content {
+        color: $text-second-color;
+        &__item {
+          margin-bottom: 5px;
+        }
+      }
+    }
+    &__toggle {
+      display: none;
+      margin-bottom: 10px;
+      @include tablet {
+        display: block;
+      }
+    }
+    &__toggle__close {
+      display: none;
+      width: fit-content;
+      font-size: 2rem;
+      margin: {
+        top: 10px;
+        bottom: 10px;
+      }
+      cursor: pointer;
+      @include tablet {
+        display: block;
+      }
+    }
+  }
+  &__content {
+    flex-grow: 1;
+    @include tablet {
+      width: 100%;
+    }
+  }
+}

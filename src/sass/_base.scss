@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 13px;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: unset;
+}
+img {
+  max-width: 100%;
+}
+@each $color, $value in $colors {
+  .color--#{$color} {
+    color: $value;
+    @if $color == "blue" {
+      transform: translateY(20px);
+      margin-bottom: 20px;
+    }
+  }
+  .background--#{$color} {
+    background-color: $value;
+  }
+}
+@for $i from 1 to 9 {
+  .grid-col-#{$i} {
+    grid-template-columns: repeat($i, 1fr);
+  }
+}
+@for $i from 1 through 8 {
+  .grid-col-md-#{$i} {
+    @include tablet {
+      grid-template-columns: repeat($i, 1fr);
+    }
+  }
+}
+@for $i from 1 through 8 {
+  .grid-col-sm-#{$i} {
+    @include mobile {
+      grid-template-columns: repeat($i, 1fr);
+    }
+  }
+}
+.container {
+  width: 100%;
+  max-width: 1620px;
+  padding: 0 50px;
+  margin: auto;
+  @include tablet {
+    padding: 0 20px;
+  }
+  @include mobile {
+    padding: 0 10px;
+  }
+}
+main.main-content {
+  margin: {
+    top: $header-height;
+    bottom: 2rem;
+  }
+  min-height: 100vh;
+  @include tablet {
+    margin-top: $header-tablet-height + 20px;
+  }
+  @include mobile {
+    margin-top: $header-mobile-height + 10px;
+  }
+}
+.grid {
+  display: grid;
+}
