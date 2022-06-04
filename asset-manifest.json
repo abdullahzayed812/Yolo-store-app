@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Yolo-store-app/static/css/main.bf918e6d.css",
-    "main.js": "/Yolo-store-app/static/js/main.2c9152fc.js",
+    "main.js": "/Yolo-store-app/static/js/main.6e6e489e.js",
     "static/media/boxicons.svg": "/Yolo-store-app/static/media/boxicons.c17adb11d64fadd1cd5a.svg",
     "static/media/slide_3.png": "/Yolo-store-app/static/media/slide_3.6e2ad4f2a2f8759c6360.png",
     "static/media/slide_2.png": "/Yolo-store-app/static/media/slide_2.a5d8646fd562e1727d9d.png",
@@ -38,10 +38,10 @@
     "static/media/Logo-2.png": "/Yolo-store-app/static/media/Logo-2.3f227664b3ce56e8fcde.png",
     "index.html": "/Yolo-store-app/index.html",
     "main.bf918e6d.css.map": "/Yolo-store-app/static/css/main.bf918e6d.css.map",
-    "main.2c9152fc.js.map": "/Yolo-store-app/static/js/main.2c9152fc.js.map"
+    "main.6e6e489e.js.map": "/Yolo-store-app/static/js/main.6e6e489e.js.map"
   },
   "entrypoints": [
     "static/css/main.bf918e6d.css",
-    "static/js/main.2c9152fc.js"
+    "static/js/main.6e6e489e.js"
   ]
 }
